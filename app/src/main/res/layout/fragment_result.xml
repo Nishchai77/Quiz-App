@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mcq.view.ResultFragment"
+    android:background="@color/md_theme_light_primary"
+    android:padding="@dimen/dp_16"
+    >
+
+    <TextView
+        android:id="@+id/result_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="@color/white"
+        android:text="@string/results"
+        android:textAlignment="center"
+        android:fontFamily="@font/roboto_slab_extrabold"
+        android:textSize="@dimen/text_size_extra_large"
+/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_questions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/result_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@color/purple_200"
+        app:strokeColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_10"
+        android:elevation="@dimen/dp_02"
+        android:layout_marginTop="@dimen/dp_16"
+        app:strokeWidth="@dimen/dp_01"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/txt_view_questions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/questions_correct"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:padding="@dimen/dp_10"
+            android:fontFamily="@font/roboto_slab_semibold"
+            />
+
+        <TextView
+            android:id="@+id/txt_view_correct_score"
+            app:layout_constraintTop_toBottomOf="@+id/txt_view_questions"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/correct"
+            android:textSize="@dimen/text_size_regular"
+            android:padding="@dimen/dp_10"
+            android:fontFamily="@font/roboto_slab_bold"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_skipped_questions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_questions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@color/purple_200"
+        app:strokeColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_10"
+        android:elevation="@dimen/dp_02"
+        android:layout_marginTop="@dimen/dp_16"
+        app:strokeWidth="@dimen/dp_01"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/txt_view_skips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/questions_skipped"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_regular"
+                android:padding="@dimen/dp_10"
+                android:fontFamily="@font/roboto_slab_semibold"
+                />
+
+            <TextView
+                android:id="@+id/txt_view_skipped_score"
+                app:layout_constraintTop_toBottomOf="@+id/txt_view_skips"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/wrong"
+                android:textSize="@dimen/text_size_regular"
+                android:padding="@dimen/dp_10"
+                android:fontFamily="@font/roboto_slab_bold"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_skipped_streak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_skipped_questions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@color/purple_200"
+        app:strokeColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_10"
+        android:elevation="@dimen/dp_02"
+        android:layout_marginTop="@dimen/dp_16"
+        app:strokeWidth="@dimen/dp_01"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/txt_view_streak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/streak_score"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_regular"
+                android:padding="@dimen/dp_10"
+                android:fontFamily="@font/roboto_slab_semibold"
+                />
+
+            <TextView
+                android:id="@+id/txt_view_streak_score"
+                app:layout_constraintTop_toBottomOf="@+id/txt_view_streak"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/streak"
+                android:textSize="@dimen/text_size_regular"
+                android:padding="@dimen/dp_10"
+                android:fontFamily="@font/roboto_slab_bold"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/restake_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:padding="16dp"
+        android:text="@string/retake"
+        app:strokeColor="@color/stroke_color"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/md_theme_light_primary"
+        app:cornerRadius="@dimen/dp_12"
+        android:fontFamily="@font/roboto_slab_semibold"
+        app:strokeWidth="@dimen/dp_01"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

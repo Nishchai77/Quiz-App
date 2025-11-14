@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Marrows Application</string>
+    <string name="app_quiz">QUIZ</string>
+    <string name="start">START</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">SKIP</string>
+    <string name="results">Results</string>
+    <string name="questions_correct">Questions Answered Correctly</string>
+    <string name="streak_score">Streak score</string>
+    <string name="questions_skipped">Number of questions skipped</string>
+    <string name="retake">RETAKE</string>
+    <string name="load_questions">Please wait while we load questions for you....</string>
+    <string name="streak_star">You are streaking...</string>
+</resources>
